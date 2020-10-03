@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(90, 143, 38); 
+}
+
+#icon-position {
+    position: relative;
+    border: lightseagreen;
+    border-style: dotted;
+    margin-top: 150px;
+}
+    
+
+#c-icon {
+    width: 210px;
+    height: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    position: relative; 
+    display: block;
+
+}
+
+#username {
+    margin-bottom: 5px;
+    border: black;
+    border-style: dotted;
+    height: 25px;
+    
+}
+
+#password {
+    margin-bottom: 8px;
+    border: black;
+    border-style: dotted;
+}
+
+
+#buttons {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border: black;
+    border-style: dotted;
+}
+
+#login {
+    border-radius: 8px;
+    font-size: 30px;
+    width: 220px;
+    transition-duration: .2s;
+    margin-left: 10px;
+}
+
+#login:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+#signup {
+    border-radius:8px;
+    font-size: 30px;
+    width: 220px;
+    transition-duration: .2s;
+    margin-left: 60px;
+    
+}
+
+#signup:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+
+#login-container {
+    border: black;
+    border-style: dotted;
+    width: 379px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+}
+
+
