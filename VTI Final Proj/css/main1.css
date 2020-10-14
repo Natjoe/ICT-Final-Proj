@@ -1,10 +1,15 @@
 body
 {
-    margin: 0;
-    padding: 0;
+    
     background-color: rgb(250, 9, 9);
     background-position: center;
     background-size: cover;
+}
+.navbar{
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -45px;
+    background-color: violet;
 }
 h1
 {
@@ -15,10 +20,12 @@ h1
 .synopsis-section
 {
     text-align: center;
-    
+    font-size: 20px;
 }
 .poster img {
     grid-area: p;
+    margin: 0;
+    padding: 0;
         position: relative;
         color: #fff;
         object-fit: cover;
