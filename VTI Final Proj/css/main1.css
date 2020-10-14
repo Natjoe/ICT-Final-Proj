@@ -1,0 +1,36 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(250, 9, 9);
+    background-position: center;
+    background-size: cover;
+}
+h1
+{
+    text-align: center;
+    font-size: 50px;
+
+}
+.synopsis-section
+{
+    text-align: center;
+    
+}
+.poster img {
+    grid-area: p;
+        position: relative;
+        color: #fff;
+        object-fit: cover;
+        width: 20%;
+        
+    }
+h3
+{
+    text-align: center;
+
+}
+.casts
+{
+    text-align: center;
+}       
