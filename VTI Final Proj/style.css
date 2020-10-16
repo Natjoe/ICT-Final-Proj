@@ -11,7 +11,7 @@ body
 }
 .series img
 {
-    width: 100%;
+    width: 10%;
     margin-top: 15px;
     box-shadow: -4px 4px 5px 0 #000;
     cursor: pointer;
@@ -19,4 +19,8 @@ body
 }
 .series img:hover{
     transform: translateY(-10px);
+}
+h1
+{
+    text-align: center;
 }
