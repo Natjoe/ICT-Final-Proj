@@ -1,0 +1,48 @@
+.image_size {
+    
+    width: 400px;
+    height: 470px;
+
+}
+
+.left_container {
+    float: left;
+    position: static;
+    border: 1px dotted black;
+    width: 25%;
+    height: 840px;
+    
+}
+
+.view_info {
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+}
+
+.right_container {
+    
+    float: left;
+    border: 1px solid black;
+    height: 840px;
+    
+    width: 74%;
+    
+
+}
+
+.synopsis {
+    text-align: center;
+}
+
+.synopsis_body {
+    text-align: center;
+    font-size: x-large;
+    padding: 10px 10px 10px 10px;
+}
+
+.cast {
+    text-align: center;
+    font-size: x-large;
+    padding-top: 10px;
+}
