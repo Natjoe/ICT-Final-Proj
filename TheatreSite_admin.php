@@ -1,3 +1,10 @@
+<?php
+$link=mysqli_connect("localhost","DB_User","n3t5h1n0b1?!","theatre_management_system_db");
+$query = "SELECT * FROM theatre_information";
+$result=mysqli_query($link,$query);
+
+
+?>
 <html>
     <head>
         <title>Choose a theatre</title>
@@ -9,32 +16,41 @@
         <div class="IconImg">
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Lady_Luck_theatre_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre1.jpg&ID=1" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre1.jpg&ID=1" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Bellgates_cinema_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre2.png&ID=1" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre2.png&ID=2" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Mayfair_theatre_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre3.png&ID=3" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre3.png&ID=3" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Loews_Pitkins_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre4.png&ID=4" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre4.png&ID=4" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Cinemacity_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre5.jpg&ID=5" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre5.jpg&ID=5" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
         </div>
      <div class="img-container">
         <div class="tooltip">
-            <img src="css/img/Theatres/theatre1.png">
+        <a href="Movie_Editor.php?ID=1" onclick="post"><img src="css/img/Theatres/theatre1.jpg"></a>
              <span class="tooltiptext">
-                 Name of theatre: Lady Luck Theatre<br><br>
-                 Address: 128 LadyMoss Drive, kingston <br><br>
-                 Contact:1-876-498-7235<br>
+                 <?php
+                     while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                 ?>
+                 
+                
               </span>
         </div>
      </div>
@@ -42,11 +58,19 @@
          
       <div class="img-container" >
              <div class="tooltip">
-                 <img src="css/img/Theatres/theatre2.jpg">
+                 <img src="css/img/Theatres/theatre2.png">
                  <span class="tooltiptext">
-                     Name of theatre: Bellgates cinema<br><br>
-                     Address: 15 Trinidad Terrace, kingston <br><br>
-                     Contact: 1-876-775-9181<br>
+                 <?php
+                 while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                     
                 </span>
             </div>
      </div>
@@ -55,9 +79,18 @@
         <div class="tooltip">
              <img src="css/img/Theatres/theatre3.png">
              <span class="tooltiptext">
-                     Name of theatre: Mayfair theatre<br><br>
-                     Address: 19 North Borrow, St. Mary<br><br>
-                     Contact:<br>
+                     <?php
+             while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+
+                     ?>
+                     
               </span>
         </div>
      </div>
@@ -67,9 +100,18 @@
         <div class="tooltip">
              <img src="css/img/Theatres/theatre4.png">
              <span class="tooltiptext">
-                     Name of theatre: Loews Pitkin Theatre<br><br>
-                     Address: <br><br>
-                     Contact:<br>
+                <?php
+             while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+
+                     ?>
+                    
               </span>
         </div>
      </div>
@@ -79,9 +121,17 @@
         <div class="tooltip">
              <img src="css/img/Theatres/theatre5.jpg">
              <span class="tooltiptext">
-                     Name of theatre: Cinemacity<br><br>
-                     Address:<br><br>
-                     Contact:<br>
+             <?php
+             while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                     
               </span>
          </div>
      </div>
@@ -92,33 +142,41 @@
     <div class="IconImg">
             <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Riviera_Movie_theatre_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre6.jpg&ID=6" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre6.jpg&ID=6" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Community_Box_theatre_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre7.jpg&ID=7" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre7.jpg&ID=7" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='State_Palace_cinema_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre8.jpg&ID=8" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre8.jpg&ID=8" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png" onclick ="location.href='Raymonds_Neon_theatre_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre9.jpg&ID=9" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre9.jpg&ID=9" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
              <img src="css/img/Icons/AddIcon.png">
             <img src="css/img/Icons/TrashIcon.png">
-             <img src="css/img/Icons/EditIcon.png">
-             <img src="css/img/Icons/ViewIcon.png"onclick ="location.href='Orchet_Cinema_review.php'">
+<a href="Edit_theatre_information.php?src=css/img/Theatres/theatre10.jpg&ID=10" onclick="post"><img src="css/img/Icons/EditIcon.png"></a>
+<a href="Theatre_review.php?src=css/img/Theatres/theatre10.jpg&ID=10" onclick="post"><img src="css/img/Icons/ViewIcon.png"></a>
         </div>
 
      <div class="img-container">
              <div class="tooltip">
                 <img src="css/img/Theatres/theatre6.jpg">
                   <span class="tooltiptext">
-                     Name of theatre: Riviera Movie Theatre<br><br>
-                     Address:<br><br>
-                     Contact:<br>
+                  <?php
+                  while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                     
                 </span>
              </div>
      </div>
@@ -127,9 +185,18 @@
             <div class="tooltip">
              <img src="css/img/Theatres/theatre7.jpg">
                  <span class="tooltiptext">
-                     Name of theatre: Community box Theatre<br><br>
-                     Address:<br><br>
-                     Contact:<br>
+
+                 <?php
+                  while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                    
                 </span>
              </div>
     </div>   
@@ -138,9 +205,18 @@
             <div class="tooltip">
                 <img src="css/img/Theatres/theatre8.jpg">
                 <span class="tooltiptext">
-                     Name of theatre: State Palace Cinema<br><br>
-                     Address:<br><br>
-                     Contact:<br>
+
+                <?php
+                  while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                     
                 </span>
             </div>
     </div> 
@@ -149,9 +225,17 @@
             <div class="tooltip">
                 <img src="css/img/Theatres/theatre9.jpg">
                <span class="tooltiptext">
-                     Name of theatre: Raymond's Neon Theatre<br><br>
-                     Address:<br><br>
-                     Contact:<br>
+               <?php
+                  while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                     
                 </span>
             </div>
      </div>
@@ -160,9 +244,17 @@
             <div class="tooltip">
                  <img src="css/img/Theatres/theatre10.jpg">
                  <span class="tooltiptext">
-                     Name of theatre: Orchet Cinema<br><br>
-                     Address:<br><br>
-                     Contact:<br>
+                 <?php
+                  while($rows=mysqli_fetch_assoc($result))
+                     {
+                        
+                        echo "Name of theatre:"." ".$rows['Theatre_Name']."<br>"."<br>";
+                        echo "Address:"." ".$rows['Address']."<br>"."<br>";     
+                        echo "Contact number:"." ".$rows['Contact_number']."<br>";
+                     break;
+                     }
+                     ?>
+                     
                 </span>
             </div>
         </div>

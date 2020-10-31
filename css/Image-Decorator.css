@@ -1,0 +1,148 @@
+
+.Row{
+
+    margin-top: 70px;
+}
+.Row::after{
+    content: "";
+    clear: both;
+    display: table;
+
+
+}
+
+.img-container {
+    display: block;
+    float: left;
+  width: 18%;
+  padding: 8px;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.img-container img{
+
+    display: inline-block;
+    width: 240px;
+    height: 126px;
+   
+}
+
+.img-container img:hover{
+  transform: translateY(-10px);
+}
+
+
+.IconImg {
+    display:block;
+}
+
+
+.IconImg img{
+width: 32px;
+height:32px;
+margin-left: 30px;
+}
+
+
+
+
+.IconImg img:nth-child(5){
+    margin-left: 65px;
+
+}
+
+.IconImg img:nth-child(9){
+    margin-left: 65px;
+
+}
+
+.IconImg img:nth-child(13){
+    margin-left: 65px;
+
+}
+
+.IconImg img:nth-child(17){
+    margin-left: 65px;
+
+}
+
+.AddButton img{
+    width: 128px;
+    height:128px;
+    vertical-align: middle;
+    margin-top: 50px;
+    margin-left: 670px;
+
+}
+
+
+body {
+    background-color: rgb(90, 143, 38); 
+}
+
+.tooltip {
+    text-decoration:none;
+    position:relative;
+  }
+   
+  .tooltip span {
+    display:none;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    color:white;
+    background:black; 
+  }
+   
+  .tooltip span img {
+    float:left;
+    margin:0px 8px 8px 0px;
+  }
+   
+  .tooltip:hover span {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    width:auto;
+    max-width:400px;
+    min-height:128px;
+    border:1px solid black;
+    margin-top:12px;
+    margin-left:32px;
+    overflow:hidden;
+    padding:8px;
+  }
+
+  .review_container{
+    display: block; 
+    margin-top: 70px;
+  }
+
+  .review_container img{
+     display: inline-block;
+     margin-left: 30px;
+  }
+
+  .review_container span {
+    display:inline-block;
+    padding: 10px;
+    margin-left: 60px;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .review_container span h1{
+      font-size: 50px;
+  }
+
+  .review_container span h3{
+    font-size: 30px;
+  }
+
+  .review_container span p{
+      font-size: 23px;
+  }

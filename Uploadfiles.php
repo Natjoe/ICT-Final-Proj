@@ -62,22 +62,13 @@ if ($uploadOk == 0) {
       if (move_uploaded_file($_FILES["imagefile"]["tmp_name"], $target_file)) {
     echo "The file ". htmlspecialchars( basename( $_FILES["imagefile"]["name"])). " has been uploaded.";
    
-
-    
-  } else {
-    echo "Sorry, there was an error uploading your file.";
-  }
-  $query="INSERT INTO theatre_information ('ID', 'Name', 'Image') VALUES ('$imageName','$imageData')";
-  $result=mysqli_query($link,$query) or die ("Error querying the database.");
-
-  if($result)
-    {
-        echo "The file ". htmlspecialchars( basename( $_FILES["imagefile"]["name"])). " has been uploaded to database.";
-    }
-    else{
-        echo "The file ". htmlspecialchars( basename( $_FILES["imagefile"]["name"])). " has not been uploaded to database.";
-    }
+} 
+else 
+{echo "Sorry, there was an error uploading your file.";}
+ 
 }
+  
+
 ?>
 
 </body>

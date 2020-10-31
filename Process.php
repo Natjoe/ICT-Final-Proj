@@ -5,7 +5,7 @@ $Password = $_POST['Pswd'];
 $Username = stripcslashes($Username);
 $Password = stripcslashes($Password);
 
-$link=mysqli_connect("localhost","DB_User","n3t5h1n0b1?!","expense_tracker_db");
+$link=mysqli_connect("localhost","DB_User","n3t5h1n0b1?!","theatre_management_system_db");
 
 $Username = mysqli_real_escape_string($link, $Username);
 $Password = mysqli_real_escape_string($link, $Password);

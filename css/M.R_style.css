@@ -1,0 +1,35 @@
+.mreview_container{
+    display: block; 
+   margin-top: 70px;
+  
+    
+  }
+
+  .mreview_container img{
+     display: inline-block;
+     margin-top:40px;
+     margin-left: 40px;
+     
+  }
+  
+
+  .mreview_container span {
+    display:inline-block;
+    padding: 10px;
+    margin-left: 60px;
+    vertical-align: top;
+    text-align: center;
+  }
+
+  .mreview_container .php span h2{
+      font-size: 35px;
+  }
+
+  .mreview_container span h3{
+    font-size: 30px;
+  }
+
+  .mreview_container span p{
+      font-size: 15px;
+      text-align: center;
+  }

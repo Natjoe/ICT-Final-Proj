@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(90, 143, 38); 
+}
+
+#icon-position {
+    position: relative;
+    margin: 100px 250px 45px 250px;
+}
+    
+
+#c-icon {
+    width: 210px;
+    height: 210px;
+    margin:auto;
+    
+    position: relative; 
+    display: block;
+
+}
+
+#username {
+    margin-bottom: 5px;
+    height: 25px;
+}
+
+#password {
+    margin-bottom: 8px;
+}
+
+
+#buttons {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#login {
+    border-radius: 1px;
+    font-size: 20px;
+    width: 170px;
+    transition-duration: .2s;
+    margin-left: 31px;
+}
+
+#login:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+#signup {
+    border-radius:1px;
+    font-size: 20px;
+    width: 170px;
+    transition-duration: .2s;
+    margin-right: 10px;
+    
+}
+
+#signup:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+
+#login-container {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+#login-container input{
+    font-size: 20px;
+}
+
+
